@@ -1,0 +1,480 @@
+{
+  "date": "2026-11-19",
+  "method": "REA 6.7.0 CLI static analysis of explicitly named installed application artifacts; no target execution or personal vault reads",
+  "mcpConnection": "No REA MCP tools exposed; doctor identified Codex registration config_drift; no configuration changes made",
+  "artifacts": [
+    {
+      "name": "obsidian-shell",
+      "installedVersion": "1.14.4",
+      "artifact": "/Applications/Obsidian.app/Contents/Resources/app.asar",
+      "bytes": 480117,
+      "sha256": "839ef8317ee0cf4f5c63273939441ca9bdb7e32c9e84864ee23037a45eb6df00",
+      "evidenceId": "ev_6b4d8fb6036274b0234e1090a1bd3031a39de6670b71b1e2ef7c20de582079d8",
+      "rawEvidencePath": "/Users/zhm/Documents/ChatGPT/做小程序/tmp/research/rea/obsidian-shell-rea.json",
+      "rawEvidenceSha256": "8788608aa881fcbf34a6fe0f05b6536ee565cceda218fa4ce17047f3af177e9f",
+      "parameters": {
+        "format": "auto",
+        "integrity_policy": "record-and-continue",
+        "analysis_timeout_ms": 90000
+      },
+      "statistics": {
+        "relevant_files": 27,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 90936,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 19,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 9480,
+        "findings": 156,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "electronSummary": {
+        "browser_windows": 0,
+        "explicit_web_preferences": 0,
+        "preload_entrypoints": 0,
+        "context_bridge_apis": 0,
+        "exposed_api_members": 0,
+        "ipc": {
+          "operations": 17,
+          "literal_channels": 4,
+          "dynamic_channel_operations": 13,
+          "renderer_transmissions": 13,
+          "renderer_listeners": 3,
+          "main_handlers": 1,
+          "paired_renderer_transmissions": 0,
+          "ambiguous_renderer_transmissions": 0,
+          "unpaired_literal_renderer_transmissions": 2
+        },
+        "sender_validation_observations": 0,
+        "utility_processes": 0,
+        "resolved_utility_entrypoints": 0,
+        "native_addon_bindings": 2,
+        "resolved_native_addon_bindings": 2
+      },
+      "coverage": {
+        "status": "partial",
+        "truncated": false,
+        "omitted_count": null,
+        "limits": []
+      },
+      "limitations": [
+        "Artifact integrity metadata contradicts observed bytes at node_modules/btime/binding.node; the observed bytes are untrusted.",
+        "Artifact integrity metadata contradicts observed bytes at node_modules/get-fonts/binding.node; the observed bytes are untrusted.",
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "Dynamic IPC channel expressions remain unresolved and are never paired by textual similarity.",
+        "Electron API identity follows proven lexical module aliases and structurally verified module-namespace interop. Other reassignments, dynamic selections, and visibly overwritten namespace members are unresolved; missing findings do not establish absence. Arbitrary call side effects and runtime registration are not evaluated.",
+        "Electron relationships are derived from inert syntax; runtime registration, reachability, defaults, and enforcement remain unproven.",
+        "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Native member names are requested by JavaScript syntax and are not verified binary exports in this workflow.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "selectedFacts": []
+    },
+    {
+      "name": "obsidian-core",
+      "installedVersion": "1.14.4",
+      "artifact": "/Applications/Obsidian.app/Contents/Resources/obsidian.asar",
+      "bytes": 27477966,
+      "sha256": "146ef8470d8cbb4a6db209bdc19bf2bad13350444186c0fd93c31087b142b92f",
+      "evidenceId": "ev_c0ac9bf3b0d83e45a3c8fb0405f659d39ccf1a2320350351fb86656378fdf483",
+      "rawEvidencePath": "/Users/zhm/Documents/ChatGPT/做小程序/tmp/research/rea/obsidian-core-rea.json",
+      "rawEvidenceSha256": "da377d584faff5cf05c4c9a74f87a31a61b03f0e6b6db7726154a4b605a14665",
+      "parameters": {
+        "format": "auto",
+        "integrity_policy": "fail",
+        "max_semantic_nodes": 12000,
+        "max_semantic_nodes_per_file": 10000,
+        "source_paths": [
+          "package.json",
+          "main.js",
+          "app.js"
+        ],
+        "max_heap_mb": 1024,
+        "analysis_timeout_ms": 90000
+      },
+      "statistics": {
+        "relevant_files": 38,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 4146088,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 2,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 1152181,
+        "findings": 489,
+        "modules": 195,
+        "parse_failures": 0
+      },
+      "electronSummary": {
+        "browser_windows": 2,
+        "explicit_web_preferences": 0,
+        "preload_entrypoints": 0,
+        "context_bridge_apis": 0,
+        "exposed_api_members": 0,
+        "ipc": {
+          "operations": 47,
+          "literal_channels": 47,
+          "dynamic_channel_operations": 0,
+          "renderer_transmissions": 0,
+          "renderer_listeners": 0,
+          "main_handlers": 47,
+          "paired_renderer_transmissions": 0,
+          "ambiguous_renderer_transmissions": 0,
+          "unpaired_literal_renderer_transmissions": 0
+        },
+        "sender_validation_observations": 1,
+        "utility_processes": 0,
+        "resolved_utility_entrypoints": 0,
+        "native_addon_bindings": 0,
+        "resolved_native_addon_bindings": 0
+      },
+      "coverage": {
+        "status": "partial",
+        "truncated": false,
+        "omitted_count": null,
+        "limits": []
+      },
+      "limitations": [
+        "Caller-selected source analysis leaves 35 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "Electron API identity follows proven lexical module aliases and structurally verified module-namespace interop. Other reassignments, dynamic selections, and visibly overwritten namespace members are unresolved; missing findings do not establish absence. Arbitrary call side effects and runtime registration are not evaluated.",
+        "Electron relationships are derived from inert syntax; runtime registration, reachability, defaults, and enforcement remain unproven.",
+        "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Sender, frame, URL, and origin checks are observations only; REA does not claim that they enforce a complete authorization policy.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "selectedFacts": [
+        {
+          "nodeId": "jag_node_13e2aaeeceaad75893141b6bb2e46d10971955a4b5b296a83c118380c8d0797c",
+          "kind": "ipc-channel",
+          "label": "vault-list",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": "main.js",
+              "start": {
+                "line": 66,
+                "column": 5258
+              },
+              "end": {
+                "line": 66,
+                "column": 5305
+              }
+            }
+          }
+        },
+        {
+          "nodeId": "jag_node_1b3f2a9b79eb620e43959403b902f009fd7f0775ce38b161fe362be39bd4b9fd",
+          "kind": "ipc-channel",
+          "label": "open-file",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": "main.js",
+              "start": {
+                "line": 66,
+                "column": 7086
+              },
+              "end": {
+                "line": 66,
+                "column": 7402
+              }
+            }
+          }
+        },
+        {
+          "nodeId": "jag_node_7b5628a555b8d3956ccc9b5baa2267a85087f1975c49691d4b389b2c9a6089a8",
+          "kind": "ipc-channel",
+          "label": "vault-open",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": "main.js",
+              "start": {
+                "line": 66,
+                "column": 5774
+              },
+              "end": {
+                "line": 66,
+                "column": 5978
+              }
+            }
+          }
+        },
+        {
+          "nodeId": "jag_node_a4269b4d9a7bb5a30c9302425a2db538bba0a13bdfee5ad7a2e052e1f8a0298e",
+          "kind": "ipc-channel",
+          "label": "trash",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": "main.js",
+              "start": {
+                "line": 66,
+                "column": 7403
+              },
+              "end": {
+                "line": 66,
+                "column": 7528
+              }
+            }
+          }
+        },
+        {
+          "nodeId": "jag_node_a65db9dc4bde1e97f92a7c4233c4941b0bf4512def37ea75a102d0fe9cb17a01",
+          "kind": "ipc-channel",
+          "label": "context-menu",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": "main.js",
+              "start": {
+                "line": 66,
+                "column": 6254
+              },
+              "end": {
+                "line": 66,
+                "column": 6302
+              }
+            }
+          }
+        },
+        {
+          "nodeId": "jag_node_d502258d8a3d2291fd1fe1721ec94e983484e3accbcd27a005f76dc8f3936759",
+          "kind": "ipc-channel",
+          "label": "print-to-pdf",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": "main.js",
+              "start": {
+                "line": 66,
+                "column": 4867
+              },
+              "end": {
+                "line": 66,
+                "column": 5101
+              }
+            }
+          }
+        },
+        {
+          "nodeId": "jag_node_e14ffdbc04894deb964fb06007ab2cb8878c25cb453fc2c4d26016f5080a9119",
+          "kind": "ipc-channel",
+          "label": "vault-move",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": "main.js",
+              "start": {
+                "line": 66,
+                "column": 5506
+              },
+              "end": {
+                "line": 66,
+                "column": 5773
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "notion-shell",
+      "installedVersion": "7.39.0",
+      "artifact": "/Applications/Notion.app/Contents/Resources/app.asar",
+      "bytes": 13494750,
+      "sha256": "cebe52a8b18e8108ac60b4dbb91b7b0edab6fdd3f53be75fab582b532b66cbad",
+      "evidenceId": "ev_922d1d16679b93a146d65cbfcdff585bddf7c88f8bb6f159edf5ba42cf7d1788",
+      "rawEvidencePath": "/Users/zhm/Documents/ChatGPT/做小程序/tmp/research/rea/notion-shell-rea.json",
+      "rawEvidenceSha256": "9f631a90267591ed1a625f5602766b006851dbe137ac7b0d4b3a7690feed885d",
+      "parameters": {
+        "format": "auto",
+        "integrity_policy": "record-and-continue",
+        "max_semantic_nodes": 12000,
+        "max_semantic_nodes_per_file": 6000,
+        "source_paths": [
+          "package.json",
+          ".webpack/main/index.js",
+          ".webpack/renderer/tabs/index.js",
+          ".webpack/renderer/tab_browser_view/preload.js"
+        ],
+        "max_heap_mb": 1024,
+        "analysis_timeout_ms": 90000
+      },
+      "statistics": {
+        "relevant_files": 160,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 5861936,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 2,
+        "skipped_javascript_files": 1,
+        "visited_ast_nodes": 1057640,
+        "findings": 6270,
+        "modules": 1918,
+        "parse_failures": 0
+      },
+      "electronSummary": {
+        "browser_windows": 14,
+        "explicit_web_preferences": 41,
+        "preload_entrypoints": 0,
+        "context_bridge_apis": 5,
+        "exposed_api_members": 231,
+        "ipc": {
+          "operations": 12,
+          "literal_channels": 4,
+          "dynamic_channel_operations": 7,
+          "renderer_transmissions": 1,
+          "renderer_listeners": 1,
+          "main_handlers": 10,
+          "paired_renderer_transmissions": 1,
+          "ambiguous_renderer_transmissions": 0,
+          "unpaired_literal_renderer_transmissions": 0
+        },
+        "sender_validation_observations": 5,
+        "utility_processes": 2,
+        "resolved_utility_entrypoints": 1,
+        "native_addon_bindings": 0,
+        "resolved_native_addon_bindings": 0
+      },
+      "coverage": {
+        "status": "partial",
+        "truncated": false,
+        "omitted_count": null,
+        "limits": [
+          {
+            "name": "javascript_analysis_worker_heap_limit_bytes",
+            "value": 1098907648,
+            "unit": "bytes"
+          },
+          {
+            "name": "javascript_analysis_worker_timeout_ms",
+            "value": 90000,
+            "unit": "milliseconds"
+          }
+        ]
+      },
+      "limitations": [
+        ".webpack/renderer/tabs/index.js: Resource constraint during analyze_javascript_application: Owned JavaScript worker exhausted its heap while analyzing .webpack/renderer/tabs/index.js during static",
+        "Artifact integrity metadata contradicts observed bytes at node_modules/@jasonscheirer/native-progress-bar/build/Release/progress_bar.node; the observed bytes are untrusted.",
+        "Artifact integrity metadata contradicts observed bytes at node_modules/@notionhq/desktop-native/build/Release/mac_utils.node; the observed bytes are untrusted.",
+        "Artifact integrity metadata contradicts observed bytes at node_modules/better-sqlite3/build/Release/better_sqlite3.node; the observed bytes are untrusted.",
+        "Artifact integrity metadata contradicts observed bytes at node_modules/cf-prefs/build/Release/cf-prefs.node; the observed bytes are untrusted.",
+        "Caller-selected source analysis leaves 156 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "Dynamic IPC channel expressions remain unresolved and are never paired by textual similarity.",
+        "Electron API identity follows proven lexical module aliases and structurally verified module-namespace interop. Other reassignments, dynamic selections, and visibly overwritten namespace members are unresolved; missing findings do not establish absence. Arbitrary call side effects and runtime registration are not evaluated.",
+        "Electron relationships are derived from inert syntax; runtime registration, reachability, defaults, and enforcement remain unproven.",
+        "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Sender, frame, URL, and origin checks are observations only; REA does not claim that they enforce a complete authorization policy.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "selectedFacts": [
+        {
+          "nodeId": "jag_node_6943a9d100408f98b9410b69289118ae33e3736ae379821306116ab5c568e4c1",
+          "kind": "electron-utility",
+          "label": "Sqlite Server",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": ".webpack/main/index.js",
+              "start": {
+                "line": 2,
+                "column": 597396
+              },
+              "end": {
+                "line": 2,
+                "column": 597485
+              }
+            }
+          }
+        },
+        {
+          "nodeId": "jag_node_6f277a563fb0354a5d4f7aebc1671f6fc44bf2c09af56bfa2bb7d06f1dd7c516",
+          "kind": "context-bridge-api",
+          "label": "__electronApi",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": ".webpack/renderer/tab_browser_view/preload.js",
+              "start": {
+                "line": 2,
+                "column": 396644
+              },
+              "end": {
+                "line": 2,
+                "column": 396708
+              }
+            }
+          },
+          "selectedMembers": [
+            "closeQuickSearch",
+            "closeTab",
+            "getMarkdownPreviewPayload",
+            "getMicrophoneAuthorizationStatus",
+            "newTab",
+            "newWindow",
+            "openInNewTab",
+            "openQuickSearchResult",
+            "openSearchModalForNewTab",
+            "openSearchModalFromQuickSearch",
+            "requestMicrophoneAccess",
+            "setZenMode",
+            "sidebarState",
+            "workspaceSwitcher"
+          ]
+        },
+        {
+          "nodeId": "jag_node_cc99a6dceaf703f95f3e306ce839aa265aa73aa6fdd9f787c0ef9df68ec9a1a9",
+          "kind": "electron-utility",
+          "label": "Desktop MCP Host",
+          "location": {
+            "available": true,
+            "value": {
+              "kind": "source-range",
+              "source": ".webpack/main/index.js",
+              "start": {
+                "line": 2,
+                "column": 269633
+              },
+              "end": {
+                "line": 2,
+                "column": 269773
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "signatureVerification": {
+    "obsidian": {
+      "strictDeepVerificationExitCode": 0,
+      "team": "6JSW4SJWN9",
+      "authority": "Dynalist Inc."
+    },
+    "notion": {
+      "strictDeepVerificationExitCode": 0,
+      "team": "LBQJ96FQ8D",
+      "authority": "Notion Labs, Incorporated"
+    }
+  }
+}

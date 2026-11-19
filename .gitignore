@@ -1,0 +1,12 @@
+node_modules/
+releases/
+.DS_Store
+.env
+.env.*
+*.log
+tmp/
+test-results/
+playwright-report/
+tests/artifacts/
+design/archive/
+assets/icon-v2.png

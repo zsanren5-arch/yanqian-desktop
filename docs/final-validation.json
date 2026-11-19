@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "date": "2026-11-19",
+  "platformVerified": "macOS arm64",
+  "modelAndFilesystemChecks": 17,
+  "browserChecks": 13,
+  "electronHostChecks": 8,
+  "electronFullUiChecks": 5,
+  "allPassed": true,
+  "runtimeDependencies": {
+    "electron": "45.3.4",
+    "dompurify": "3.4.18",
+    "marked": "17.0.1"
+  },
+  "signedWithDeveloperId": false,
+  "notarized": false,
+  "windowsAndLinuxRuntimeVerified": false,
+  "productionOrUserVaultAccessed": false,
+  "containsPrivateCredentials": false,
+  "thirdPartyClientCodeIncluded": false,
+  "githubPublished": false,
+  "githubStatus": "awaiting user login and repository access",
+  "artifacts": [
+    {
+      "name": "yanqian-1.0.0-mac-arm64.dmg",
+      "bytes": 124931700,
+      "sha256": "ddf1e60a8cf543a5c8cc7460bf5be931d58d5f3f6e164bd2ddc6320450e68381"
+    },
+    {
+      "name": "yanqian-1.0.0-mac-arm64.zip",
+      "bytes": 120595492,
+      "sha256": "9ae88139877ab108a91105cf33799c91e00cf2a56c7dd0e73467dddaf1bf8e67"
+    }
+  ]
+}

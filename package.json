@@ -1,0 +1,89 @@
+{
+  "name": "yanqian-desktop",
+  "version": "1.0.0",
+  "description": "眼前日程 — local-first notes and tasks, vibe coded by the author and ChatGPT",
+  "main": "electron/main.cjs",
+  "private": true,
+  "author": "眼前日程作者与 ChatGPT",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "test:host": "node --test tests/host/*.test.cjs",
+    "check:host": "node --check electron/main.cjs && node --check electron/preload.cjs && node --check electron/vault-store.cjs",
+    "package:mac": "electron-builder --mac dmg zip --arm64",
+    "package:win": "electron-builder --win nsis --x64",
+    "package:linux": "electron-builder --linux AppImage --x64",
+    "package:dir": "electron-builder --dir --arm64",
+    "verify:package": "node scripts/verify-package.cjs",
+    "vendor": "node scripts/prepare-vendor.cjs",
+    "icons": "node scripts/prepare-icons.cjs",
+    "prepackage:mac": "npm run vendor && npm run icons && npm run check:host && npm run test:host",
+    "prepackage:win": "npm run vendor && npm run check:host && npm run test:host",
+    "prepackage:linux": "npm run vendor && npm run check:host && npm run test:host",
+    "test": "node --test tests/model.test.mjs tests/host/*.test.cjs",
+    "test:model": "node --test tests/model.test.mjs",
+    "test:browser": "node tests/browser-check.mjs",
+    "test:electron": "node tests/host/electron-smoke.cjs && node tests/host/electron-ui.cjs"
+  },
+  "devDependencies": {
+    "electron": "45.3.4",
+    "electron-builder": "26.18.0",
+    "playwright": "1.62.1"
+  },
+  "build": {
+    "appId": "cn.yanqian.desktop",
+    "productName": "眼前日程",
+    "asar": true,
+    "directories": {
+      "output": "releases"
+    },
+    "files": [
+      "index.html",
+      "src/**/*",
+      "assets/**/*",
+      "vendor/**/*",
+      "electron/**/*",
+      "package.json",
+      "LICENSE",
+      "!**/*.map"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "assets/icon.icns",
+      "identity": null
+    },
+    "dmg": {
+      "sign": false
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Office",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "artifactName": "yanqian-${version}-${os}-${arch}.${ext}"
+  },
+  "dependencies": {
+    "dompurify": "3.4.18",
+    "marked": "17.0.1"
+  },
+  "type": "module"
+}
