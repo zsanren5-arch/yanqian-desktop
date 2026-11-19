@@ -5,6 +5,8 @@
 
 一款本地优先的 Markdown 笔记与待办电脑版。打开即可写，停笔自动保存。笔记就是你自己的 `.md` 文件，可以带走，也可以用其他编辑器打开。
 
+[下载 macOS Apple Silicon 安装包（v1.0.0）](https://github.com/zsanren5-arch/yanqian-desktop/releases/tag/v1.0.0)
+
 ## 为什么这样做
 
 我们用 REA 静态分析了本机 Obsidian 1.14.4 和 Notion 7.39.0 的公开客户端产物，并阅读了两者的公开用户讨论。借鉴的是本地文件、快速搜索、可选关联和正文清单混排；首页只留下真正写作需要的入口。

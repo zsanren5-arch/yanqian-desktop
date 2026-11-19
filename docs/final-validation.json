@@ -18,8 +18,8 @@
   "productionOrUserVaultAccessed": false,
   "containsPrivateCredentials": false,
   "thirdPartyClientCodeIncluded": false,
-  "githubPublished": false,
-  "githubStatus": "awaiting user login and repository access",
+  "githubPublished": true,
+  "githubStatus": "public source and v1.0.0 release published; six uploaded assets verified by GitHub SHA-256 digests",
   "artifacts": [
     {
       "name": "yanqian-1.0.0-mac-arm64.dmg",
@@ -30,6 +30,15 @@
       "name": "yanqian-1.0.0-mac-arm64.zip",
       "bytes": 120595492,
       "sha256": "9ae88139877ab108a91105cf33799c91e00cf2a56c7dd0e73467dddaf1bf8e67"
+    },
+    {
+      "name": "yanqian-desktop-1.0.0-source.zip",
+      "bytes": 2835249,
+      "sha256": "0c4e607226148c95bd89b8000711689ad7675c928e4738f774254cb943ded383"
     }
-  ]
+  ],
+  "repositoryUrl": "https://github.com/zsanren5-arch/yanqian-desktop",
+  "releaseUrl": "https://github.com/zsanren5-arch/yanqian-desktop/releases/tag/v1.0.0",
+  "sourceCommit": "645ba68471886f3719e64f2791688bb70e1b2e27",
+  "publishedAt": "2026-11-19T16:34:35Z"
 }
